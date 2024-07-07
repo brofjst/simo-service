@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: simo-service
+  session:
+    jdbc:
+      initialize-schema: always
+  profiles:
+    active: default
+
+  datasource:
+    url: jdbc:postgresql://postgres:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 9091
+
+  logging:
+    level:
+      root: INFO
+      com:
+        example:
+          simo: DEBUG
+
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
+    endpoint:
+      health:
+        show-details: "always"
+

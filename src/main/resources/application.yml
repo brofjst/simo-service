@@ -20,13 +20,6 @@ spring:
 server:
   port: 9091
 
-  logging:
-    level:
-      root: INFO
-      com:
-        example:
-          simo: DEBUG
-
   management:
     endpoints:
       web:
